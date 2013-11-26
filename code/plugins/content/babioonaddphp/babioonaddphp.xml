@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="content" method="upgrade">
+
+	<name>babioonaddphp</name>
+	<author>Robert Deutz</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Robert Deutz</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@babioon.com</authorEmail>
+	<authorUrl>www.babioon.com</authorUrl>
+	<version>2.0.0</version>
+	<description>PLG_BABIOONADDPHP_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="babioonaddphp">babioonaddphp.php</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_babioonaddphp.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_babioonaddphp.sys.ini</language>
+	</languages>
+
+	<params></params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="event" type="radio" default="0" label="PLG_CONTENT_BABIOONADDPHP_USE_EVENT"
+						description="PLG_CONTENT_BABIOONADDPHP_USE_EVENT_DESC">
+				  <option value="0">onContentPrepare</option>
+				  <option value="1">onContentBeforeDisplay</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="BABIOONADDPHP_ONCONTENTBEFOREDISPLAY">
+				<field name="baserule" type="radio" default="0" label="PLG_CONTENT_BABIOONADDPHP_BASERULE"
+						description="PLG_CONTENT_BABIOONADDPHP_BASERULE_DESC">
+				  <option value="0">PLG_CONTENT_BABIOONADDPHP_DENY</option>
+				  <option value="1">PLG_CONTENT_BABIOONADDPHP_ALLOW</option>
+				</field>
+
+				<field name="rarticle" type="text" default="" label="PLG_CONTENT_BABIOONADDPHP_RARTICLE"
+						description="PLG_CONTENT_BABIOONADDPHP_RARTICLE_DESC" size="30" />
+
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
