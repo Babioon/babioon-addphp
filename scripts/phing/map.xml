@@ -13,11 +13,11 @@
 
 		<phingcall target="symboliclink">
 			<property name="source" value="${packagedir}/${projectname}/code/plugins/content/babioonaddphp" />
-			<property name="target" value="${targetdir}/plugins/search/babioonaddphp" />
+			<property name="target" value="${targetdir}/plugins/content/babioonaddphp" />
 		</phingcall>
 
 		<phingcall target="maplanguage">
-			<property name="basesource" value="${packagedir}/${projectname}/code/plugins/search/babioonaddphp/language" />
+			<property name="basesource" value="${packagedir}/${projectname}/code/plugins/content/babioonaddphp/language" />
 			<property name="basetarget" value="${targetdir}/administrator/language" />
 		</phingcall>
 

@@ -11,13 +11,13 @@
 * Add PHP Plugin
 *
 * Usage:
-* {rdaddphp file=realtive_path_to_file_in_your_htdocs_include_file_name}
+* {babioonaddphp file=realtive_path_to_file_in_your_htdocs_include_file_name}
 *
 * Example:
 * Joomla installed in /var/www/joomla
 * PHP-Files in /var/www/joomla/myphpfiles/
 * Filename ist my_file.php
-* {rdaddphp file=myphpfiles/my_file.php}
+* {babioonaddphp file=myphpfiles/my_file.php}
 *
 */
 
