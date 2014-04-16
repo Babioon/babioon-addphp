@@ -80,7 +80,7 @@ class plgContentBabioonaddphp extends JPlugin
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
 		// check if there is something to replace
-		if ($this->isTagInText($article->text))
+		if (property_exists($article, 'text') && $this->isTagInText($article->text))
 		{
 			$remove = false;
 			// check if we should process on this event and context
@@ -118,7 +118,7 @@ class plgContentBabioonaddphp extends JPlugin
 	public function onContentBeforeDisplay($context, &$article, &$params, $page = 0)
 	{
 		// check if there is something to replace
-		if (!$this->isTagInText($article->text))
+		if (property_exists($article, 'text') && !$this->isTagInText($article->text))
 		{
 			$remove = false;
 			// check if we should process on this event and context
