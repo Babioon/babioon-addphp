@@ -118,7 +118,7 @@ class plgContentBabioonaddphp extends JPlugin
 	public function onContentBeforeDisplay($context, &$article, &$params, $page = 0)
 	{
 		// check if there is something to replace
-		if (property_exists($article, 'text') && !$this->isTagInText($article->text))
+		if (property_exists($article, 'text') && $this->isTagInText($article->text))
 		{
 			$remove = false;
 			// check if we should process on this event and context
@@ -131,7 +131,7 @@ class plgContentBabioonaddphp extends JPlugin
 					return;
 				}
 
-				if ($this->isArticleOnWhiteList($article) || $this->params->get('runonarticles', 1) == 0)
+				if (!$this->isArticleOnWhiteList($article) || $this->params->get('runonarticles', 1) == 0)
 				{
 					$remove = true;
 				}
@@ -168,8 +168,8 @@ class plgContentBabioonaddphp extends JPlugin
 				$phpfile  = @$args['file'];
 				$myfolder = $this->params->get('myfolder','');
 
-				$basedir = JPATH_ROOT . '/';
-				if ($myfolder != '')
+				$basedir = JPATH_ROOT . '/' ;
+				if ($myfolder != '-1')
 				{
 					$basedir = $basedir . $myfolder . '/';
 				}
@@ -186,7 +186,7 @@ class plgContentBabioonaddphp extends JPlugin
 					}
 					else
 					{
-						$output = "File: $phpfile don't exists";
+						$output = "File: $phpfile don't exists (" . JPATH_ROOT . ")";
 					}
 				}
 			}
